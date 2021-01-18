@@ -34,10 +34,8 @@ namespace coding_excercise
 
         public bool IsProbationOver { get; set; }
 
-        public void EndTempPeriod()
-        {
-            IsProbationOver = true;
-        }
+        public void EndTempPeriod() => IsProbationOver = true;
+
         public abstract void AdjustVacation(int additionalDays);
 
         public abstract void AdjustSalary(double adjustmentFactor);
@@ -45,7 +43,7 @@ namespace coding_excercise
 
     abstract class Contractor : Employee
     {
-        public Contractor(double hourlyRate) : base()
+        public Contractor(double hourlyRate)
         {
             HourlyRate = hourlyRate;
             IsProbationOver = false;
